@@ -1,5 +1,8 @@
 import "@styles/globals.css";
 
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
+
 type RootLayoutProps = {
   children: React.ReactNode;
 };
@@ -12,13 +15,18 @@ export const metadata = {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      <body>
-        <div className="main">
-          <div className="gradient" />
-        </div>
+      <Provider>
+        <body>
+          <div className="main">
+            <div className="gradient" />
+          </div>
 
-        <main className="app">{children}</main>
-      </body>
+          <main className="app">
+            <Nav />
+            {children}
+          </main>
+        </body>
+      </Provider>
     </html>
   );
 };
