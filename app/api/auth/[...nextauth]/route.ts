@@ -16,7 +16,7 @@ const handler = NextAuth({
       // store the user id from MongoDB to session
       if (session?.user) {
         const sessionUser = await User.findOne({ email: session.user.email });
-        token.id = sessionUser._id.toString();
+        session.user.id = sessionUser._id.toString();
       }
 
       return session;
@@ -33,13 +33,13 @@ const handler = NextAuth({
           await User.create({
             email: profile?.email,
             username: profile?.name?.replace(" ", "").toLowerCase(),
-            image: profile?.image,
+            image: user?.image,
           });
         }
 
         return true;
       } catch (error) {
-        console.log("Error checking if user exists: ", error);
+        console.error("Error checking if user exists: ", error);
         return false;
       }
     },

@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction } from "react";
 
 type FormProps = {
   post: Prompt;
-  type: "Create";
+  type: "Create" | "Edit";
   setPost: Dispatch<SetStateAction<Prompt>>;
   submitting: boolean;
   handleSubmit: (e: any) => Promise<void>;

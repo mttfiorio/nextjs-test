@@ -21,6 +21,10 @@ NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_URL_INTERNAL="http://localhost:3000"
 NEXTAUTH_SECRET=
 ```
+this is used for the server side fetches to the /api
+```
+URL="http://localhost:3000"
+```
 
 
 
