@@ -17,8 +17,7 @@ const Form = ({ post, type, setPost, submitting, handleSubmit }: FormProps) => {
         <span className="blue_gradient">{type} Post</span>
       </h1>
       <p className="desc text-left max-w-md">
-        {type} and share prompts with the world using AI. <br />
-        TODO: write some company jargon stuff to make this appealing
+        {type} and share AI prompts with the world. <br />
       </p>
 
       <form

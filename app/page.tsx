@@ -5,15 +5,11 @@ const Home = () => {
     <section className="w-full flex-center flex-col">
       <h1 className="head_text text-center">
         Discover & Share <br className="max-md:hidden" />
-        <span className="orange_gradient text-center">
-          {" "}
-          AI-prompts, because AI needs more hype
-        </span>
+        <span className="orange_gradient text-center"> AI-prompt</span>
       </h1>
 
       <p className="desc text-center">
-        open-source AI prompting tool for modern world discover, bla bla TODO:
-        include more catchy words
+        using the AI hype in a webapp that has absolutely nothing to do with AI
       </p>
 
       <Feed />
